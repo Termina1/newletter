@@ -12,7 +12,7 @@ Example config:
 
 ```
 config:
-  adressFrom:
+  addressFrom:
     name: "Newsletter"
     address: "test@mail.com"
   username: "test"

@@ -27,7 +27,7 @@ newsletterConfigSpec = sectionsSpec "config" $ do
   username <- reqSection  "username" "Username for SMTP server"
   password <- reqSection "password" "Password for SMTP server"
   host <- reqSection "host" "Host for SMTP server"
-  address <- reqSection' "adressFrom" addressFromSpec "Address to send email from"
+  address <- reqSection' "addressFrom" addressFromSpec "Address to send email from"
   return $ NewsletterConfig address (fromStrict host) (fromStrict username) (fromStrict password)
 
 timeSpec :: ValueSpecs UTCTime
