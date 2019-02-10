@@ -1,0 +1,73 @@
+name:                newsletter
+version:             0.1.0.0
+github:              "githubuser/newsletter"
+license:             BSD3
+author:              "Author name here"
+maintainer:          "example@example.com"
+copyright:           "2019 Author name here"
+
+extra-source-files:
+- README.md
+- ChangeLog.md
+
+# Metadata used when publishing your package
+# synopsis:            Short description of your package
+# category:            Web
+
+# To avoid duplicated efforts in documentation and dealing with the
+# complications of embedding Haddock markup inside cabal files, it is
+# common to point users to the README.md file.
+description:         Please see the README on GitHub at <https://github.com/githubuser/newsletter#readme>
+
+dependencies:
+- base >= 4.7 && < 5
+- datetime-sb >= 0.2.4
+- http-conduit >= 2.3.5
+- rss-conduit >= 0.4.3.1
+- conduit >= 1.3.0 && < 1.4.0
+- resourcet >= 1.2.2 && < 1.3.0
+- conduit-extra >= 1.3.0 && < 1.4.0
+- xml-conduit >= 1.8.0.1 && < 1.9
+- mime-mail >= 0.4.11
+- text >= 1.2.3.1 && < 1.3
+- filepath >= 1.4.2.1
+- tls >= 1.4.1
+- network >= 2.8.0.0
+- data-default >= 0.7.1.1
+- bytestring >= 0.10.8.2
+- stringsearch >= 0.3.6.6
+- base64-bytestring >= 1.0.0.2
+- attoparsec >= 0.13.2.2
+- shakespeare >= 2.0.20
+- blaze-html >= 0.9.1.1
+- blaze-markup >= 0.8.2.2
+- uri-bytestring >= 0.3.2.1
+- time >= 1.8.0.2
+- config-value >= 0.6.3.1
+- exceptions >= 0.10.0
+- config-schema >= 0.5.0.1
+
+library:
+  source-dirs: src
+
+executables:
+  newsletter-exe:
+    main:                Main.hs
+    source-dirs:         app
+    ghc-options:
+    - -threaded
+    - -rtsopts
+    - -with-rtsopts=-N
+    dependencies:
+    - newsletter
+
+tests:
+  newsletter-test:
+    main:                Spec.hs
+    source-dirs:         test
+    ghc-options:
+    - -threaded
+    - -rtsopts
+    - -with-rtsopts=-N
+    dependencies:
+    - newsletter
