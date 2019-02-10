@@ -1,0 +1,1 @@
+00 12 * * * root /usr/local/bin/newsletter-exe /etc/newsletter/configs/config >> /var/log/new.log 2>&1
